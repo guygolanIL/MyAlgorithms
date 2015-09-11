@@ -24,9 +24,7 @@ public class MyCompressorOutputStream extends OutputStream {
 	 	byte last = byteArr[0];
 	 	byte counter = 0;
 	 	
-	 	//specify the number of bytes in the uncompressed array.
-	 	out.write(byteArr.length); 
-	 	
+	 		 	
 	 	//compress and write the array.
  		for(byte b : byteArr)
  		{

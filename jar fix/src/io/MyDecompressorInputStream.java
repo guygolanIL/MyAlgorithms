@@ -6,15 +6,10 @@ import java.io.InputStream;
 public class MyDecompressorInputStream extends InputStream {
 
 	InputStream in;
-	int decopressedSize;
 	
 	public MyDecompressorInputStream(InputStream in) {
 		this.in  = in;
-		try {
-			decopressedSize = in.read();
-		} catch (IOException e) {
-			System.out.println("the file is empty");
-		}
+		
 	}
 	
 	@Override
@@ -23,12 +18,7 @@ public class MyDecompressorInputStream extends InputStream {
 		return (int)in.read();
 	}
 	
-	@Override
-	public int available()
-	{
-		return decopressedSize;
-	}
-	
+
 	public int read(byte[] b) throws IOException{
 		byte last;
 		byte counter;
