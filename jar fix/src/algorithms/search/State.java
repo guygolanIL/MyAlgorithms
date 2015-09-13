@@ -26,6 +26,7 @@ public class State<T> {
 	}
 	
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public boolean equals(Object s){
 		return state.equals(((State<T>) s).getState());

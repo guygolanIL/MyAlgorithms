@@ -3,11 +3,16 @@ package io;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Decompress binary data from any InputStream.
+ * @author Guy Golan & Amit Sandak
+ *
+ */
 public class MyDecompressorInputStream extends InputStream {
 
 	InputStream in;
 	
-	public MyDecompressorInputStream(InputStream in) {
+	public MyDecompressorInputStream(InputStream in) {		//Ctor
 		this.in  = in;
 		
 	}
@@ -19,13 +24,17 @@ public class MyDecompressorInputStream extends InputStream {
 	}
 	
 
+	/**
+	 * reading binary data from an InputStream decompresses it and inserting it into a received byte array.
+	 */
 	public int read(byte[] b) throws IOException{
 		byte last;
 		byte counter;
 		int fileSize= in.available();
 		int k = 0 ;
 		
-		for(int i = 0 ; i < fileSize ; i += 2){
+		for(int i = 0 ; i < fileSize ; i += 2)
+		{
 			if(b.length <= k)
 				break;
 			

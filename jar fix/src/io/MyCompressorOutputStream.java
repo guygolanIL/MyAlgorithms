@@ -3,12 +3,17 @@ package io;
 import java.io.IOException;
 import java.io.OutputStream;
 
+/**
+ * Compresses and writes a byte array out to any OutputStream.
+ * @author Guy Golan & Amit Sandak
+ *
+ */
 public class MyCompressorOutputStream extends OutputStream {
 
 	private OutputStream out;
 	
 	
-	public MyCompressorOutputStream(OutputStream out) {
+	public MyCompressorOutputStream(OutputStream out) {		//Ctor
 		this.out = out;	
 	}
 	
@@ -19,6 +24,9 @@ public class MyCompressorOutputStream extends OutputStream {
 	}
  	
  	
+ 	/**
+ 	 * The method writes the byte array data into the OutputStream in a compressed fashion.
+ 	 */
  	public void write(byte[] byteArr) throws IOException 
  	{
 	 	byte last = byteArr[0];

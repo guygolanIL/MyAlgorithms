@@ -49,6 +49,7 @@ public class MyMaze3dGenerator extends CommonMazeGenerator {
 			if(neighbors.size() > 0)	//if there are any neighbors left to visit
 			{
 				Position newCell = neighbors.get(r.nextInt(neighbors.size()));	//getting a random neighbor
+				@SuppressWarnings("unused")
 				Position wall = m.eraseWallBetween(currentCell,newCell);	//breaking the wall between the current cell and the chosen random cell
 				
 				stack.push(currentCell);		

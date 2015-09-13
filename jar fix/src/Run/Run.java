@@ -16,6 +16,7 @@ import io.MyDecompressorInputStream;
 
 public class Run {
 
+	@SuppressWarnings("unused")
 	private static void testMazeGenerator(Maze3dGenerator mg){
 		// prints the time it takes the algorithm to run
 		System.out.println(mg.measureAlgorithmTime(5,9,9));

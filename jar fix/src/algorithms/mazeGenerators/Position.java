@@ -78,6 +78,11 @@ public class Position {		//defining Position
 	public void setZ(int z) {
 		this.z = z;
 	}
+	
+	/**
+	 * Converting and storing the Position data into byte array.
+	 * @return byte array that represents the Position.
+	 */
 	public byte[] toByteArray() {
 		byte[] b = new byte[3] ;
 		int  i =0 ;
