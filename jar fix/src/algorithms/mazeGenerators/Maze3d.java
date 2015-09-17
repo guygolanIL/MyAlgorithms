@@ -106,6 +106,10 @@ public class Maze3d {
 	public String toString() {
 		
 		String s = "";
+		s+="Enterance position: ";
+		s+= this.getEntrance().toString()+"\n";
+		s+="Exit position: ";
+		s+= this.getExit().toString()+"\n\n";
 		
 		for (int[][] is : arr) {
 			for (int[] is2 : is) {
@@ -116,6 +120,7 @@ public class Maze3d {
 			}
 			s+="\n";
 		}
+		
 		
 		return s;
 	}

@@ -93,7 +93,7 @@ public class Run {
 		
 		//exe 3
 		
-		Maze3d maze = new MyMaze3dGenerator().generate(3, 5, 5);
+		Maze3d maze = new MyMaze3dGenerator().generate(20, 20, 20);
 		
 		// save it to a file
 		try {
@@ -103,10 +103,8 @@ public class Run {
 			out.close();
 			
 			InputStream in=new MyDecompressorInputStream(new FileInputStream("1.maz"));
-			byte b[]=new byte[in.available()];
+			byte b[]=new byte[9999];
 			in.read(b);
-			in.close();
-			
 			
 			Maze3d loaded=new Maze3d(b);
 			System.out.println("");

@@ -50,11 +50,10 @@ public class MyDecompressorInputStream extends InputStream {
 				
 				b[k++] = last;
 			}
+			
 		}
-		
 		
 		return -1;
 		
 	}
-
 }

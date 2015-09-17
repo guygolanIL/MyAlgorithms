@@ -36,7 +36,7 @@ public class MyCompressorOutputStream extends OutputStream {
 	 	//compress and write the array.
  		for(byte b : byteArr)
  		{
- 			if(b == last)
+ 			if((b == last)&&(counter<127))
  			{
  				counter++;
  			}
@@ -53,6 +53,6 @@ public class MyCompressorOutputStream extends OutputStream {
  			out.write(last);
  			out.write(counter);
  		}
- 		
  	}
+ 	
 }
