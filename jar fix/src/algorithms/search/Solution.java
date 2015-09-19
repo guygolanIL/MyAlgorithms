@@ -55,4 +55,20 @@ public class Solution<T> {
 		
 		this.arr.add(i , s);
 	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		Solution s = (Solution)obj;
+		if(s.arr.size() != this.arr.size())
+			return false;
+		
+			for (int i = 0; i < s.arr.size(); i++){
+				if(!this.arr.get(i).equals(s.arr.get(i)))return false;
+			}
+		
+		
+			return true;
+		
+	}
 }
