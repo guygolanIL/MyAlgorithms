@@ -2,12 +2,15 @@ package algorithms.search;
 
 import static org.junit.Assert.*;
 
+import java.io.BufferedOutputStream;
+
 import org.junit.Test;
 
 import algorithms.mazeGenerators.Maze3d;
 import algorithms.mazeGenerators.Position;
 
 public class AStarTest {
+
 
 	@Test
 	public void shortestPathTest() {
