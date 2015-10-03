@@ -47,16 +47,16 @@ public class Position {		//defining Position
 	public boolean equals(Object obj){		//checks if two positions are equal
 		try
 		{
-		Position p = (Position)obj;
-		if(this.getX() == p.getX() && this.getY() == p.getY() && this.getZ() == p.getZ() )
-		{
-			return true;
-		}
-		return false;
-		} catch (ClassCastException e)
-		{
+			Position p = (Position)obj;
+			if(this.getX() == p.getX() && this.getY() == p.getY() && this.getZ() == p.getZ() )
+			{
+				return true;
+			}
 			return false;
-		}
+			} catch (ClassCastException e)
+			{
+				return false;
+			}
 	}
 	
 									//--------------setters and getters-------------------
