@@ -633,13 +633,16 @@ public class Maze3d {
 		if( i >= 0 && i <= this.getyAxis())
 		{
 			int[][] plain = new int[this.getxAxis()][this.getzAxis()];
-		
-			for(int j = 0 ; j < this.getxAxis() ;j++)
+			
+			for(int j = this.getxAxis()-1 ; j >=0 ;j--)
 			{
+				
 				for(int k = 0 ; k < this.getzAxis(); k++)
 				{
 					plain[j][k] = this.arr[j][i][k];
+					
 				}
+				
 			}
 		
 			return plain;
@@ -661,7 +664,7 @@ public class Maze3d {
 		{
 			int[][] plain = new int[this.getxAxis()][this.getyAxis()];
 			
-			for(int j = 0 ; j < this.getxAxis() ;j++)
+			for(int j= this.getxAxis()-1 ; j >=0 ;j--)
 			{
 				for(int k = 0 ; k < this.getyAxis(); k++)
 				{
