@@ -25,7 +25,7 @@ public class Test {
 		
 		Maze3d maze = new Maze3d(b);
 		int[][] plainx = maze.getCrossSectionByX(0);
-		//int[][] plainy = maze.getCrossSectionByY(0);
+		int[][] plainy = maze.getCrossSectionByY(0);
 		int[][] plainz = maze.getCrossSectionByZ(0);
 		
 		for (int[] is : plainx) {
