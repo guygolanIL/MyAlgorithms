@@ -632,17 +632,22 @@ public class Maze3d {
 	public int[][] getCrossSectionByY(int i) throws IndexOutOfBoundsException {				//return a plain (2d maze) by a certain y
 		if( i >= 0 && i <= this.getyAxis())
 		{
+			int t =this.getxAxis()-1;
+			int s;
+			int j = 0;
+			int k = 0;
 			int[][] plain = new int[this.getxAxis()][this.getzAxis()];
 			
-			for(int j = this.getxAxis()-1 ; j >=0 ;j--)
+			for( j = 0 ; j <this.getxAxis() ;j++)
 			{
-				
-				for(int k = 0 ; k < this.getzAxis(); k++)
+				s=0;
+				for( k = 0 ; k < this.getzAxis(); k++)
 				{
-					plain[j][k] = this.arr[j][i][k];
-					
+					plain[t][s] = this.arr[j][i][k];
+					s++;
 				}
 				
+				t--;
 			}
 		
 			return plain;
@@ -662,14 +667,21 @@ public class Maze3d {
 	public int[][] getCrossSectionByZ(int i) throws IndexOutOfBoundsException{			//return a plain (2d maze) by a certain z
 		if(i >= 0 && i <= this.getzAxis())
 		{
+			int t =this.getxAxis()-1;
+			int s;
+			int j = 0;
+			int k = 0;
 			int[][] plain = new int[this.getxAxis()][this.getyAxis()];
 			
-			for(int j= this.getxAxis()-1 ; j >=0 ;j--)
+			for(j = 0 ; j <this.getxAxis() ;j++)
 			{
-				for(int k = 0 ; k < this.getyAxis(); k++)
+				s=0;
+				for(k = 0 ; k < this.getyAxis(); k++)
 				{
-					plain[j][k] = this.arr[j][k][i];
+					plain[t][s] = this.arr[j][k][i];
+					s++;
 				}
+				t--;
 			}
 			
 			return plain;
