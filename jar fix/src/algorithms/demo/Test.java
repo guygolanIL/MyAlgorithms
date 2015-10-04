@@ -19,13 +19,13 @@ public class Test {
 				7,8,9,
 				
 				
-				1,2,3,
+				1,2,66,
 				4,5,7,
 				8,8,9};
 		
 		Maze3d maze = new Maze3d(b);
-		int[][] plainx = maze.getCrossSectionByX(0);
-		int[][] plainy = maze.getCrossSectionByY(1);
+		int[][] plainx = maze.getCrossSectionByX(1);
+		int[][] plainy = maze.getCrossSectionByY(0);
 		int[][] plainz = maze.getCrossSectionByZ(0);
 		
 		for (int[] is : plainz) {
