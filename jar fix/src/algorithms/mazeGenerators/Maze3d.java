@@ -1,5 +1,6 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -8,7 +9,7 @@ import java.util.Random;
  * @author Guy Golan
  *
  */
-public class Maze3d {
+public class Maze3d implements Serializable{
 
 	private final int xAxis;			////maze dimensions
 	private final int yAxis;

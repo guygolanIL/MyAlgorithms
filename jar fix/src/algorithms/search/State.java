@@ -1,5 +1,7 @@
 package algorithms.search;
 
+import java.io.Serializable;
+
 /**
  * The State represents the simplest form of a generic problem's state.
  * <p>
@@ -8,7 +10,7 @@ package algorithms.search;
  *
  */
 
-public class State<T> {
+public class State<T> implements Serializable{
 	private T state;
 	private double cost;
 	private State<T> cameFrom;

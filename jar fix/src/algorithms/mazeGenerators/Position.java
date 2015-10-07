@@ -1,11 +1,13 @@
 package algorithms.mazeGenerators;
 
+import java.io.Serializable;
+
 /**
  * Defines a position type for any 3D maze.
  * @author Guy Golan
  *
  */
-public class Position {		//defining Position
+public class Position implements Serializable {		//defining Position
 
 	private int x,y,z;
 

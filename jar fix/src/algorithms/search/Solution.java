@@ -1,5 +1,6 @@
 package algorithms.search;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -8,7 +9,7 @@ import java.util.ArrayList;
  *
  */
 
-public class Solution<T> {
+public class Solution<T> implements Serializable{
 	
 	private ArrayList<State<T>> arr;
 	
