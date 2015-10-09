@@ -3,6 +3,7 @@ package algorithms.search;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.omg.PortableInterceptor.SUCCESSFUL;
 
 import algorithms.mazeGenerators.Maze3d;
 import algorithms.mazeGenerators.Position;
@@ -118,6 +119,22 @@ public class AStarTest {
 		System.out.println(result);
 		assertEquals(s , result);
 	}
+	
+	@Test
+	public void mazeIsNull() {
+		try{
+			AStar<Position> searchTest = new AStar<Position>(new MazeAirDistance(new State<Position>(new Position(0,1,0))));
+					
+			Maze3d maze = new Maze3d(11,11,11);
+	
+			Solution<Position> solution = searchTest.search(new MazeDomain(maze));
+			
+		}catch (NullPointerException e)
+		{
+			assertEquals(1,1);
+		}
+	}
+	
 }
 
 
