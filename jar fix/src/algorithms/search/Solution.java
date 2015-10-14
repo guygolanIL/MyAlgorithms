@@ -56,6 +56,16 @@ public class Solution<T> implements Serializable{
 		
 		this.arr.add(i , s);
 	}
+	
+	/**
+	 *adding a State to the final Solution in a specific index.
+	 * @param i	- int : an index to for the state to be inserted to.
+	 * @param s - State.
+	 */
+		public void add(State<T> s) {
+			
+			this.arr.add(s);
+		}
 
 
 	@Override
