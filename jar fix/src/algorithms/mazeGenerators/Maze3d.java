@@ -104,6 +104,13 @@ public class Maze3d implements Serializable{
 	}
 
 	@Override
+	public int hashCode() {
+		
+		
+		return this.toString().hashCode();
+	}
+	
+	@Override
 	public String toString() {
 		
 		String s = "";
